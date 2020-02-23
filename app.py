@@ -9,3 +9,5 @@ saving_file_name = f"{save_path}/{file_name}"
 saving_file=open(saving_file_name, "w")
 saving_file.write("""Hello my name is ABCD""")
 saving_file.close()
+
+print('Download completed')
