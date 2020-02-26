@@ -5,9 +5,10 @@ import csv, json, datetime
 from ticker_simpol import get_sp500_symbol
 
 with open('key.json') as config:
-    apiKey = json.load(config)['alphavantage-apiKey']
+    config_data = json.load(config)
+    apiKey = config_data['alphavantage-apiKey']
+    save_path = config_data['saving-directory']
 
-save_path = '/home/tomo/dev/stock/data/timeseries'
 sp500_symbols = get_sp500_symbol()
 
 for symbol in sp500_symbols:
